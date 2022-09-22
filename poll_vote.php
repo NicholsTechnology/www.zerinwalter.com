@@ -28,7 +28,7 @@ fclose($fp);
 <table>
 <tr>
 <td>Yes:</td>
-<td><img src="poll.gif"
+<td><img src="poll1.gif"
 width='<?php echo(100*round($yes/($no+$yes),2)); ?>'
 height='20'>
 <?php echo(100*round($yes/($no+$yes),2)); ?>%
@@ -36,7 +36,7 @@ height='20'>
 </tr>
 <tr>
 <td>No:</td>
-<td><img src="poll.gif"
+<td><img src="poll2.gif"
 width='<?php echo(100*round($no/($no+$yes),2)); ?>'
 height='20'>
 <?php echo(100*round($no/($no+$yes),2)); ?>%
