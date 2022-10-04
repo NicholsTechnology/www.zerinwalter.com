@@ -1,10 +1,3 @@
-<html>
-  <style>
-body {
-  background-color: lightgray;
-}
-</style>
-  </html>
 
 
 
