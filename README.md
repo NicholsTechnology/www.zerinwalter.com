@@ -4,4 +4,4 @@
 
 # zerinnichols.com
 Website
-# www.zerinnichols.com is the website for nichols technology group.
+# www.zerinnichols.com the ultimate website with almost no content! please do visit it and use my calculator!
