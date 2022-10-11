@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div><h3>This is my snake, Jimmy. Feed him or he will be a sad snake.</h3></div>
 <html>
 <head>
   <title>Basic Snake HTML Game</title>
@@ -97,11 +98,11 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = 'red';
+  context.fillStyle = 'grey';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'green';
+  context.fillStyle = 'red';
   snake.cells.forEach(function(cell, index) {
 
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
@@ -167,5 +168,14 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+
+<style>
+div {
+  position: absolute;
+  left: px;
+  top: 10px;
+}
+</style>
+</head>
 </body>
 </html>
