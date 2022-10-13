@@ -5,9 +5,39 @@
       <link rel="icon" type="image/x-icon" href="favicon.ico?">
   </head>
   <body style="background-color:lightgrey;">
-    <h1 style="color:red;">Welcome to ZerinNichols.com!</h1>
+    <div><h1 style="color:red;">Welcome to ZerinNichols.com!</h1> </div>
+    
      <div class="dash1"></div>
+     
+     
   <p>Links (Dropdown Menus)</p>
+  <html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="205647465077-2qhhk0jiha3vn1ltdnsufvofaruhnfmr.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script>
+  </body>
+</html>
+<br>
   <style>
 body {
   font-family: Arial, sans-serif;
@@ -120,7 +150,6 @@ body {
 <br><br>    <form action="https://docs.google.com/presentation/d/1HlhMFeE6SW0rYC4bSY5_LraAIIjP8XhtLQgy5J8rN9k/edit?usp=sharing">
     <input type="submit" value="Edit this google slide presentaion and you get a cookie." /> <br> <br> <br><h1>CLICK ON THIS ⬆</h1>
 </form>
-<br><br>
 
 
 <head>
