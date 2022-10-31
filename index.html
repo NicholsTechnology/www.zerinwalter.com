@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,22 +14,20 @@
 
   <meta name="google-signin-client_id" content="205647465077-2qhhk0jiha3vn1ltdnsufvofaruhnfmr.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-</head>
-<body>
+
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
   <script>
     function onSignIn(googleUser) {
       // get user profile information
-      console.log(googleUser.getBasicProfile())
+      console.log('User is ' +JSON.stringify(googleUser.getBasicProfile())
     }
   </script>
 </body>
 </html>
       
-    </script>
-  </body>
-</html>
+
+
 <br>
   <style>
 body {
