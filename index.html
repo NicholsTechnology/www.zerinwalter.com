@@ -1,275 +1,181 @@
 <!DOCTYPE html>
-<html>
-    
-  <head>
-    <title>Zerin Nichols</title>
-      <link rel="icon" type="image/x-icon" href="favicon.ico?">
-  </head>
-  <body style="background-color:lightgrey;">
-    <div><h1 style="color:red;">Welcome to ZerinNichols.com!</h1> </div>
-    
-     <div class="dash1"></div>
-     
-     
-     
-  <p>Links (Dropdown Menus)</p>
-
+<div><h3>(www.zerinnichols.com is not going to be up until November 10th 2022. Pleast accept this snake game as an apology for the inconvenience.)This is my snake, Jimmy. Feed him or he will be a sad snake.</h3></div>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <script src="https://apis.google.com/js/api:client.js"></script>
-  <script>
-  var googleUser = {};
-  var startApp = function() {
-    gapi.load('auth2', function(){
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: '205647465077-2qhhk0jiha3vn1ltdnsufvofaruhnfmr.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
-      });
-      attachSignin(document.getElementById('customBtn'));
-    });
-  };
-
-  function attachSignin(element) {
-    console.log(element.id);
-    auth2.attachClickHandler(element, {},
-        function(googleUser) {
-          document.getElementById('name').innerText = "Signed in: " +
-              googleUser.getBasicProfile().getName();
-        }, function(error) {
-          alert(JSON.stringify(error, undefined, 2));
-        });
-  }
-  </script>
-  <style type="text/css">
-    #customBtn {
-      display: inline-block;
-      background: white;
-      color: #444;
-      width: 190px;
-      border-radius: 5px;
-      border: thin solid #888;
-      box-shadow: 1px 1px 1px grey;
-      white-space: nowrap;
-    }
-    #customBtn:hover {
-      cursor: pointer;
-    }
-    span.label {
-      font-family: serif;
-      font-weight: normal;
-    }
-    span.icon {
-      background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-      display: inline-block;
-      vertical-align: middle;
-      width: 42px;
-      height: 42px;
-    }
-    span.buttonText {
-      display: inline-block;
-      vertical-align: middle;
-      padding-left: 42px;
-      padding-right: 42px;
-      font-size: 14px;
-      font-weight: bold;
-      /* Use the Roboto font that is loaded in the <head> */
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
-  </head>
-  <body>
-  <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-  <div id="gSignInWrapper">
-    <span class="label">Sign in with:</span>
-    <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
-    </div>
-  </div>
-  <div id="name"></div>
-  <script>startApp();</script>
-</body>
-</html>
-      
-
-
-<br>
+  <title>Basic Snake HTML Game</title>
+  <meta charset="UTF-8">
   <style>
-body {
-  font-family: Arial, sans-serif;
-}
-</style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
 
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn1 {
-  background-color: grey;
-  color: white;
-  padding: 5px 12px;
-  font-size: 13px;
-
-}
-
-.dropdown1 {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content1 {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content1 a {
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content1 a:hover {background-color: #ddd;}
-
-.dropdown1:hover .dropdown-content1 {display: block;}
-
-.dropdown1:hover .dropbtn1 {background-color: grey;}
-</style>
+  body {
+    background: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    border: 1px solid white;
+  }
+  </style>
 </head>
 <body>
+<canvas width="400" height="400" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
 
+// the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
+// (e.g. 16 * 25 = 400)
+var grid = 16;
+var count = 0;
 
-<div class="dropdown1">
-  <button class="dropbtn1">Random Website Content</button>
-  <div class="dropdown-content1">
-    <a href="http://www.zerinnichols.com/fd/fallout-dice">Fallout Dice</a>
-    <a href="https://www.zerinnichols.com/cal/scientific-calculator">Zerin's Calculator</a>
-    <a href="https://www.zerinnichols.com/snake/snake">Zerin's Snake</a>
-    <a href="http://www.zerinnichols.com/links710">Social Links</a>    
-    <a href="http://www.zerinnichols.com/dos">Uno (Beta)</a>
-        <a href="http://www.zerinnichols.com/oct13">Original Site Content</a>
-    <a href="http://www.zerinnichols.com/discord">Discord Server</a>
-  </div>
-</div>
+var snake = {
+  x: 160,
+  y: 160,
 
-</body>
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
 
+  // keep track of all grids the snake body occupies
+  cells: [],
 
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
 
-  <div class="dash"></div>
-</body>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'grey';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'red';
+  snake.cells.forEach(function(cell, index) {
+
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+
+      // canvas is 400x400 which is 25x25 grids
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+</script>
+
 <style>
-.vl {
-  border-left: 0px solid grey;
-  height: 268px;
+div {
   position: absolute;
-  left: 15%;
-  margin-left: -3px;
-  top: 77px;
+  left: px;
+  top: 10px;
 }
 </style>
-  <style>
-  .dash{
-        border: 0px solid grey;
-        width: 202px;
-        height: 0px;
-    	border-left: 2px solid grey;
-    	position: absolute;
-    	left: 0%;
-    	margin-left: -1px;
-    	top: 345px;
-
-}
-  </style>
-    <style>
-  .dash1{
-        border: 1px solid grey;
-        width: 7000px;
-        height: 0px;
-    	border-left: 2px solid grey;
-    	position: absolute;
-    	left: 0%;
-    	margin-left: -1px;
-    	top: 75px;
-
-  </style>
-    <form action="https://open.spotify.com/embed-legacy/playlist/0FOOcOpWUHfZz1VjYJecs1?utm_source=generator">
-    <input type="submit" value="Spotify Playlist: Music I" />
-</form>
-
-    <form action="https://www.spaghettimonster.org/">
-    <input type="submit" value="Church of the FSM" />
-</form> <h1>CLICK ON THIS ⬇</h1>
-    <form action="https://docs.google.com/presentation/d/1HlhMFeE6SW0rYC4bSY5_LraAIIjP8XhtLQgy5J8rN9k/edit?usp=sharing">
-    <input type="submit" value="Edit this google slide presentaion and you get a cookie." /> <h1>CLICK ON THIS ⬆</h1>
-</form>
-
-    <form action="mailto:walter@zerinnichols.com?subject=Website%20Suggestions">
-    <input type="submit" value="Website Suggestions? Email Me!" />
-</form> 
-<br>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: grey;
-  color: white;
-  padding: 5px 12px;
-  font-size: 13px;
-
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: grey;}
-</style>
-
-
-
-<div class="dropdown">
-  <button class="dropbtn">Repair Service</button>
-  <div class="dropdown-content">
-    <a href="http://www.zerinnichols.com/service-form">Service Form</a>
-    <a href="https://discord.com/app">About</a>
-
-  </div>
-</div>
-
-
-<div class="vl"></div>
-
+</head>
 </body>
 </html>
