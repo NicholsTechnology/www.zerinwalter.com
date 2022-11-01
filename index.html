@@ -6,8 +6,8 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        background: #999;
-        width: 100%;
+        background: #9999;
+        width: 1100%;
         height: 100%;
         opacity: 0.8;
         z-index: 100;
@@ -17,12 +17,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        background: #fff;
+        background: black;
         width: 500px;
-        height: 500px;
+        height: 140px;
         margin-left: -250px; /*Half the value of width to center div*/
         margin-top: -250px; /*Half the value of height to center div*/
-        z-index: 200;
+        z-index: 400;
     }
 
     #popupclose {
@@ -30,19 +30,25 @@
         padding: 10px;
         cursor: pointer;
     }
+    
+        #jim {
+        float: center;
+        cursor: pointer;
+        left: 30px;
+    }
   </style>
 </head>
 <body>
-<div id="maincontent">
-    <h1>Page Content<h2>
-</div>
+
 <div id="overlay"></div>
 <div id="popup">
     <div class="popupcontrols">
-        <span id="popupclose">X</span>
+        <span id="popupclose"><p style="color:red;">X</p></span>
     </div>
     <div class="popupcontent">
-        <h1>If you are a customer of Nichols Technology, or would like to make a request, click on the link below for Nichols Technology Service Request Form.</h1>
+        <p style="color:white;"> If you are a customer of Nichols Technology, or would like to make a request, click on the button below for the Service Request Form.</p><div clas="jim"><a href="http://www.zerinnichols.com/service-form">
+   <button style="background-color:grey; border-color:grey; color:white">Nichols Technology Service Request Form</button></a></div>
+        
     </div>
 </div>
 <script type="text/javascript">
@@ -130,7 +136,12 @@ body {
     	top: 75px;
 
   </style>
+    <style>
+  .jim{
+        cursor: pointer;
+        left: 10%;
 
+  </style>
 
 
 <div class="vl"></div>
