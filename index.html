@@ -1,5 +1,64 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <style>
+    #overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #999;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    #popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        width: 500px;
+        height: 500px;
+        margin-left: -250px; /*Half the value of width to center div*/
+        margin-top: -250px; /*Half the value of height to center div*/
+        z-index: 200;
+    }
+
+    #popupclose {
+        float: right;
+        padding: 10px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="maincontent">
+    <h1>Page Content<h2>
+</div>
+<div id="overlay"></div>
+<div id="popup">
+    <div class="popupcontrols">
+        <span id="popupclose">X</span>
+    </div>
+    <div class="popupcontent">
+        <h1>If you are a customer of Nichols Technology, or would like to make a request, click on the link below for Nichols Technology Service Request Form.</h1>
+    </div>
+</div>
+<script type="text/javascript">
+    // Initialize Variables
+    var closePopup = document.getElementById("popupclose");
+    var overlay = document.getElementById("overlay");
+    var popup = document.getElementById("popup");
+ 
+    // Close Popup Event
+    closePopup.onclick = function() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    };
+</script>
+</body>
+</body>
   <head>
     <title>Zerin Nichols</title>
       <link rel="icon" type="image/x-icon" href="favicon.ico?">
