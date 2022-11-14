@@ -1,0 +1,12 @@
+.link-box1{
+    width: 515px;
+    height: 410px;
+    border: 1px solid black;
+    position: relative;
+    top: -1560px;
+    left: 770px;
+    }
+    .red {
+        background-color: rgb(199, 199, 199);
+        overflow: hidden;
+      }
