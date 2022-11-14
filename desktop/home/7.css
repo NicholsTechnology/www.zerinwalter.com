@@ -5,6 +5,7 @@
     position: relative;
     top: -1560px;
     left: 770px;
+    overflow: hidden;
     }
     .red {
         background-color: rgb(199, 199, 199);
