@@ -52,7 +52,7 @@ button {
 	margin: auto;
 	height: 200px;
 	overflow: hidden;
-	background-color: #765490;
+	background-color: yellow;
 }
 
 #controls > div {
@@ -71,10 +71,10 @@ button {
 }
 
 button {
-	background-color: #6A4883;
+	background-color: yellow;
 	font-weight: bold;
 	font-size: 18px;
-	color: white;
+	color: ywllow;
 	text-shadow: 0 3px #433061;
 	padding: 2px 10px 5px;
 	border-radius: 0 0 10px 10px;
