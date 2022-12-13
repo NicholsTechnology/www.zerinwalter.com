@@ -14,4 +14,10 @@ loginButton.addEventListener("click", (e) => {
     } else {
         loginErrorMsg.style.opacity = 1;
     }
+        if (username === "Jimmy" && password === "jimmy123") {
+        alert("You have successfully logged in as Jimmy.");
+        location.reload();
+    } else {
+        loginErrorMsg.style.opacity = 1;
+    }
 })
