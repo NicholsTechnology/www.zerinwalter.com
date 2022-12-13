@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <body style="background-color:lightgrey">
-     <h1 style="color:red;">Welcome to the ZerinNichols.com login page! (BETA - 0.01)</h1><br><br></body>
+     <h1 style="color:red;">Welcome to the ZerinNichols.com login page! (BETA - 0.01)</h1><br></body>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +9,39 @@
   <link rel="stylesheet" href="login-page1.css">
   <script defer src="login-page.js"></script>
 </head>
-
+<div class="login-form">
 <body>
   <main id="main-holder">
     <h1 id="login-header"></h1>
     
-    <div id="login-error-msg-holder">
-      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-    </div>
-    
+
     <form id="login-form">
+        <h2>-Login Form-</h2>
       <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-     <br>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+     <br><br>
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password"> <br><br>
       <input type="submit" value="Login" id="login-form-submit">
     </form>
+    </div>
+
+<div class="square"></div>
   
   </main>
 </body>
+  <style>
+.square {
+  position: relative;
+  height: 150px;
+  width: 250px;
+  background-color: #555;
+  top: -126px;
+  left: 30px;
+  z-index:-1;
+}
+.login-form {
+  position: relative;
+  left:50px;
 
+}
+</style>
 </html>
