@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "ZerinNichols" && password === "467251zn") {
         alert("You have successfully logged in as ZerinNichols.");
-        location.reload();
+        window.location.replace("http://www.zerinnichols.com");
     } else {
         loginErrorMsg.style.opacity = 1;
     }
