@@ -1,0 +1,16 @@
+.box-2
+{
+  width: 315px;
+  height: 532px;
+  border: 1px solid black;
+  position: absolute;
+  left:400px;
+  top: 106px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.red {
+    background-color: rgb(199, 199, 199);
+    overflow: hidden;
+  }
