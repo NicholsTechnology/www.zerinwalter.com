@@ -2,7 +2,7 @@ let Autoclickers = {
   Cpots: 0,
   OldButtons: '',
   nbrOwned: {
-    'clickers': {cost:50, number: 0, cps: 1, buttonString: 'Clicker', showing: false, state: ''},
+    'clickers': {cost:50, number: 0, cps: 199999999999999999999999999999999999999999999999999999, buttonString: 'Clicker', showing: false, state: ''},
     'trainedclickers': {cost:200, number:0, cps:5, buttonString: 'Trained Clicker', showing: false, state: ''},
     'spammers': {cost:1000, number:0, cps:30, buttonString: 'Spammer', showing: false, state: ''},
     'tappers': {cost:20000, number:0, cps:100, buttonString: 'Tapper', showing: false, state: ''},
