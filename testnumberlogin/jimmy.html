@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Main Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <p id="username">
+        <script>
+            //get username from the url
+            var urlParams = new URLSearchParams(window.location.search);
+            var username = urlParams.get('username');
+
+            //show username
+            document.getElementById('username').innerHTML = 'Username: ' + username;
+        </script>
+        </p>
+    </body>
+</html>
