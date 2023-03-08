@@ -1,54 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
- <body style="background-color:lightgrey">
-     <h2 style="color:red;">Welcome to the ZerinNichols.com login page! (BETA - 0.01)</h2><br></body>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="login-page1.css">
-  <script defer src="login-page.js"></script>
-</head>
-<div class="login-form">
-<body>
-  <main id="main-holder">
-    <h1 id="login-header"></h1>
-    
+<style>
+  body {
+    background-color: grey;
+    font-family: Arial, sans-serif;
+  }
 
-    <form id="login-form">
-        <div class="logo"><img src="http://www.zerinnichols.com/favicon.ico" alt="Z LOGO" style="width:50px;height:50px;"></div>
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-     <br><br>
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password"> <br><br>
-      <input type="submit" value="Login" id="login-form-submit">
-    </form>
-    </div>
+    img {
+        width: 34px;
+        top: -50px;
+        left: 70px;
+        position: relative;
+        
+    }
 
-<div class="square"></div>
-  
-  </main>
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 1px;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+  }
 
-  <style>
-.square {
-  position: relative;
-  height: 190px;
-  width: 250px;
-  background-color: #adadad;
-  top: -175px;
-  left: 30px;
-  z-index:-1;
-}
-.logo {
-  position: relative;
-  top: -6px;
-  left: 66px;
-  z-index:;
-}
-.login-form {
-  position: relative;
-  left:50px;
+  .input-group {
+    margin-bottom: 9px;
+  }
 
-}
+  input {
+    width: 100%;
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+  }
 </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form action="/action_page.php">
+      <div class="logo">
+          <img src="https://www.zerinnichols.com/favicon.ico" alt="Z_LOGO">
+          </div>
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" name="username" required>
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  // Get form elements
+  const form = document.querySelector('form');
+  const username = document.querySelector('input[name="username"]');
+  const password = document.querySelector('input[name="password"]');
+
+  // Create an array to store valid credentials
+  const users = [
+    {
+      username: 'ZerinNichols',
+      password: '467251zn'
+    },
+    {
+      username: 'Guest001',
+      password: 'skill0issue'
+    }
+  ];
+
+  // Add an event listener to the form
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Get the values from the form
+    const usernameValue = username.value;
+    const passwordValue = password.value;
+
+    // Check if the credentials are valid
+    const isValid = users.find(user => user.username === usernameValue && user.password === passwordValue);
+
+    if (isValid) {
+      // If valid, redirect to page
+      window.location = 'dashboard.html';
+    } else {
+      // If not valid, show an error
+      alert('Invalid credentials');
+    }
+  });
+  event.stopPropagation();
+  
+    document.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let username = document.querySelector('input[name="username"]').value;
+        window.location.href = `/mobile/home.html?username=${username}`;
+    });
+</script>
+
 </body>
 </html>
