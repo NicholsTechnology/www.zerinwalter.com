@@ -6,7 +6,15 @@
   </head>
   <body style="background-color:lightgrey;">
     <h2 style="color:red;">Welcome to ZerinNichols.com!</h2> 
-    
+            <p id="username">
+        <script>
+            //get username from the url
+            var urlParams = new URLSearchParams(window.location.search);
+            var username = urlParams.get('username');
+
+            //show username
+            document.getElementById('username').innerHTML = 'Username: ' + username;
+        </script>
     <div class="dash7"></div>
  
   <p>Links</p>
