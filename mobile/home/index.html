@@ -6,59 +6,112 @@
   </head>
   <body style="background-color:lightgrey;">
     <h2 style="color:red;">Welcome to ZerinNichols.com!</h2> 
-            <p id="username">
-        <script>
-            //get username from the url
-            var urlParams = new URLSearchParams(window.location.search);
-            var username = urlParams.get('username');
 
-            //show username
-            document.getElementById('username').innerHTML = 'Username: ' + username;
-        </script>
     <div class="dash7"></div>
  
   <p>Links</p>
 
   <style>
-body {
-  font-family: Arial, sans-serif;
+		body {	
+  		font-family: Arial, sans-serif;
+	   }
+        .button {
+        background-color: grey;
+        color: white;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: red;
+      }
+              .button1 {
+        background-color: grey;
+        color: white;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: yellow;
+      }
+                    .button2 {
+        background-color: black;
+        color: #39FF14;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: black;
+      }
+    
+    body {
+      font-family: sans-serif;
+      background-color: #ddd;
+    }
+    .main {
+      max-width: 700px;
+      background-color: #fef;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #3333;
+    }
+    .container {
+      text-align: center;
+    }
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .name {
+      font-size: 2.5em;
+      margin-top: 10px;
+    }
+    .bio {
+      font-size: 1.2em;
+      color: #933;
+    }
+    
+    
+a.button:hover{
+     background: #919191;
 }
-</style>
-  <div class="fdbutton"><a href="http://www.zerinnichols.com/fd/fallout-dice-mobile">
-   <button style="background-color:black; border-color:grey; color:#39FF14">Fallout Dice</button></a>
- </div>
-   <br>
-  <a href="http://www.zerinnichols.com/links710">
-   <button style="background-color:#7289d9; border-color:grey; color:white">Other Links (Social)</button>
-</a>
-      <br>
+a.button1:hover{
+     background: #919191;
+}
+a.button2:hover{
+     background: #262626;
+}
+  </style>
+    <a class="button2" href="http://www.zerinnichols.com/fd/fallout-dice-mobile">Fallout Dice</a>
     <br>
-      <a href="https://www.zerinnichols.com/butter">
-   <button style="background-color:grey; border-color:yellow; color:white">butter</button></a>
-      <br>
+    <a class="button" href="http://www.zerinnichols.com/links710">Other Links (Social)</a>
+	<br>
+    <a class="button1" href="http://www.zerinnichols.com/butter">Butter</a>
     <br>
-      <a href="https://www.zerinnichols.com/snake/snake">
-   <button style="background-color:grey; border-color:grey; color:white">Zerin's Snake</button></a>
-      <br>
+    <a class="button" href="http://www.zerinnichols.com/weather/totally-real-forecast">100% Real Forecast</a>
     <br>
-          <a href="http://www.zerinnichols.com/weather/totally-real-forecast">
-   <button style="background-color:grey; border-color:grey; color:white"> 100% Real Weather Forecast </button></a>
-<br>
-<br>
-      <a href="http://www.zerinnichols.com/login">
-   <button style="background-color:grey; border-color:grey; color:white">Login 0.01</button></a>
-<br>
-<br>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSe_29JRvJgVQC2Z0IuV1YmjXxW6OBpIaDCHTFBUXCCgxvALCQ/viewform?usp=send_form"><button style="background-color:gray; border-color:grey; color:white">Repair Service Form</button></a>
-  <div class="dash"></div>
+    <a class="button" href="http://www.zerinnichols.com/login">Login 0.01</a>
     <br>
+    <a class="button" href="https://www.zerinnichols.com/404PAGE">Repair Service Form</a>
     <br>
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_9PjaXiL_BFph64fHbOnWmLp6XPPQIzC0iE4oCiWq5SBBnw/viewform?vc=0&c=0&w=1&flr=0">
-    <button style="background-color:black; border-color:grey; color:white">pickles</button></a>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd_9PjaXiL_BFph64fHbOnWmLp6XPPQIzC0iE4oCiWq5SBBnw/viewform?vc=0&c=0&w=1&flr=0">Pickles</a>
     <br>
-    <br>
-               <a href="https://www.zerinnichols.com/gay">
-    <button style="background-color:blue; border-color:red; color:cyan">pickles</button></a>
+    <a class="button" href="https://www.zerinnichols.com/gay">Suspicious Button?</a>
     <br>
     <br>
     <form method="get" action="zerinnichols.apk">
@@ -67,7 +120,7 @@ body {
     <br> 
     <br>
     
-    <a href="https://careers.walmart.com"> <img src="wmh.jpg" alt="walmart">  </a>
+    <a href="https://careers.walmart.com"> <img src="https://www.zerinnichols.com/mobile/home/wmh.jpg" alt="walmart">  </a>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
