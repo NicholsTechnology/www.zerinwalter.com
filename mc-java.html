@@ -9,4 +9,21 @@
   <p>To request to be whitelisted, email me at zerin@nicholstechgroup.com </p> 
   <br>
   <p>The server's address is mc.zerinnichols.com</p>
+<body>
+
+<input type="text" value="mc.zerinnichols.com" id="myInput">
+<button onclick="myFunction()">Copy Server Address</button>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  alert("Copied " + copyText.value);
+}
+</script>
+
+</body>
 </html>
+
