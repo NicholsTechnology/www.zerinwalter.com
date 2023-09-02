@@ -3,11 +3,20 @@
     <title>Zerin's MC Server (java)</title>
   </head>
   <h1 style="color:red;">Welcome to Zerin's Minecraft Java Server!</h1>
-  <hr>
   <br>
   
   <body style="background-color:lightgrey">
     <style>
+    .block {
+  display: block;
+  width: 100%;
+  border:5px solid grey;
+  background-color: red;
+  padding: 14px 28px;
+  font-size: 36px;
+  cursor: pointer;
+  text-align: center;
+}
     body {
       font-family: Arial, sans-serif;
       overflow: hidden;
@@ -26,15 +35,25 @@
 		body {	
   		font-family: Arial, sans-serif;
 	   }
+	   .block:hover {
+  background-color: #ddd;
+  color: black;
+}
+.textboxid
+{
+    height:600px;
+    font-size:44pt;
+}
     
       </style>
   <h1>
   
 To request to be whitelisted, email me at zerin@nicholstechgroup.com 
- The server's address is
-
-<input type="text" value="mc.nicholstechgroup.com" id="myInput">
-<button onclick="myFunction()">Copy Server Address</button>
+ The server's address is:
+<input <input style="height:50px;font-size:24pt;" type="text" value="mc.nicholstechgroup.com" id="myInput">
+<br>
+<br>
+<button class="block" onclick="myFunction()">Copy Server Address</button>
 </p>
 <script>
 function myFunction() {
