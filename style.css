@@ -1,0 +1,132 @@
+.box-0{
+    width: 315px;
+    height: 310px;
+    border: 2px solid red;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    overflow: hidden;
+    }
+.box-2
+{
+  width: 315px;
+  height: 532px;
+  border: 1px solid red;
+  position: absolute;
+  left:400px;
+  top: 106px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.red {
+    background-color: rgb(199, 199, 199);
+    overflow: hidden;
+  }
+.TRP-H2
+{
+  position:relative;
+  left:10px;
+  top: 3px;
+  overflow: hidden;
+  }
+.TRP-H4
+{
+
+  position:relative;
+  left:13px;
+  top: 38px;
+  overflow: hidden;
+  }
+.TRP-H9
+{
+
+  position:relative;
+  left:13px;
+  top: -1030px;
+  left: 464px;
+  overflow: hidden;
+  }
+.TRP-P2
+{
+  position:relative;
+  left: 405px;
+  top: -1075px;
+  overflow: hidden;
+  
+  }
+.link-box1{
+    width: 515px;
+    height: 1035px;
+    border: 1px solid grey;
+    position: relative;
+    top: -1060px;
+    left: 470px;
+    overflow: hidden;
+    }
+    .red {
+        background-color: rgb(199, 199, 199);
+        overflow: hidden;
+      }
+.TRP-HY
+{
+
+  position:relative;
+  left: -130px;
+  top: -1970px;
+  left: 954px;
+  overflow: hidden;
+  }
+.button-link
+{
+
+  position:relative;
+  left:13px;
+  top: -2400px;
+  left: 500px;
+  overflow: hidden;
+  z-index:1;
+  }
+.container
+{
+
+  position:relative;
+  top: -2100px;
+  left:1100px;
+  border: 4px solid red;
+  overflow: hidden;
+  z-index:-3;
+  }
+<style>
+    .container {
+    position: relative;  
+    width:100%;
+    max-width:316px;
+    
+}
+.container:before {
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;left:0;right:0;
+  background-color:rgba(0,0,0,0);
+}
+.container:hover::before {
+  background-color:rgba(0,0,0,10);
+}
+.container img {
+  display:block;
+}
+.container button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity:0;
+} 
+.container:hover button {   
+  opacity: 1;
+}
+</style>
