@@ -97,7 +97,6 @@
   overflow: hidden;
   z-index:-3;
   }
-<style>
     .container {
     position: relative;  
     width:100%;
@@ -129,4 +128,109 @@
 .container:hover button {   
   opacity: 1;
 }
-</style>
+ body {
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+        .dash71
+        {
+              border: 1px solid grey;
+              width: 100%;
+            overflow: hidden;
+  
+              
+      
+        }
+        .button {
+        background-color: grey;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: red;
+      }
+              .button1 {
+        background-color: grey;
+        color: white;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: yellow;
+      }
+                    .button2 {
+        background-color: black;
+        color: #39FF14;
+        padding: 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+      }
+    
+    body {
+      font-family: sans-serif;
+      background-color: #ddd;
+    }
+    .main {
+      max-width: 700px;
+      background-color: #fef;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #3333;
+    }
+    .container {
+      text-align: center;
+    }
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .name {
+      font-size: 2.5em;
+      margin-top: 10px;
+    }
+    .bio {
+      font-size: 1.2em;
+      color: #933;
+    }
+  height: 190px;
+  width: 315px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  position:relative;
+  top: -513px;
+  left: 10px;
+  z-index: -1;
+  overflow: hidden;
+}
+.img-1 {
+  margin-bottom: 15px;
+  border: 0px solid black;
+  position:relative;
+  top: -500px;
+  left: 11px;
+  z-index: -1;
+  overflow: hidden;
+}
+.red {
+  background-color: rgb(199, 199, 199);
+  overflow: hidden;
+}
