@@ -9,14 +9,19 @@
       font-family: Arial, sans-serif;
       overflow: hidden;
     }
-.spin {
-  transform: rotate(180deg);
-}
 img {
-  transform: rotate(70deg);
+  animation: rotation 2s infinite linear;
+}
+  @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 </style>
-<img src="https://www.zerinwalter.com/desktop/home/images/gru.gif" alt="Computer man" style="width:48px;height:48px;">
+<img src="https://www.zerinwalter.com/desktop/home/images/gru.gif" alt="Computer man" style="width:100px;height:100px;">
 </body>
 </html>
 
