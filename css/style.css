@@ -8,7 +8,6 @@ img {
   border-style: solid;
   border: 3px solid red;
   border-radius: 10px;
-  margin: 10px;
   display: inline-block;
   position: relative;
 }
