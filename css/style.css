@@ -5,13 +5,14 @@ body {
     }
 
 img {
-  border-style: solid;
-  border: 3px solid red;
-  border-radius: 10px;
   display: inline-block;
   position: relative;
 }
 .img2 {
+  border-style: solid;
+  border: 3px solid red;
+  border-radius: 10px;
+  display: inline-block;
   position: absolute;
   top: 82px;
   left: 800px;
@@ -20,6 +21,10 @@ img {
   cursor: not-allowed;
 }
 .img3 {
+  border-style: solid;
+  border: 3px solid red;
+  border-radius: 10px;
+  display: inline-block;
   position: absolute;
   top: 444px;
   left: 800px;
