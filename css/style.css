@@ -32,6 +32,19 @@ img {
   height: 250px;
   cursor: not-allowed;
 }
+.img4 {
+  border-style: solid;
+  border: 3px solid red;
+  border-radius: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 444px;
+  left: 800px;
+  width: 310px;
+  height: 250px;
+  margin: 10px;
+  cursor: not-allowed;
+}
 
 .border-box {
  postition: relative;
