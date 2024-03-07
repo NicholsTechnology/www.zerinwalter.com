@@ -178,6 +178,8 @@ body {
         border-style: solid;
         border-radius: 4px;
         border-color: red;
+        position: relative;
+        display: inline-block;
 }
 
 .dropdown {
